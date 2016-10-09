@@ -1,0 +1,128 @@
+html, body, ul
+{
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑 Light, 微软雅黑;
+}
+
+/*******************************************************/
+
+header.header
+{
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 60px;
+    background-color: #fff;
+}
+
+.logo-area
+{
+    display: block;
+    float: left;
+    height: 100%;
+    padding-left: 48px;
+    background-image: url("../img/logo.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-family: 微软雅黑;
+}
+
+.login-area
+{
+    float: right;
+    display: block;
+    height: 100%;
+    margin-top: -3px;
+    margin-left: 10px;
+    padding-left: 18px;
+    background-image: url("../img/user.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color: #e74f4d;
+}
+
+nav.hor-nav
+{
+    float: right;
+    margin-top: -3px;
+}
+
+.hor-nav ul li
+{
+    float: left;
+    list-style: none;
+}
+
+.hor-nav ul li a
+{
+    display: block;
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+.nav-current, .nav-text:hover
+{
+    color: #e74f4d;
+    border-bottom: solid 3px #e74f4d;
+}
+
+.hero
+{
+    height: 854px;
+    background-image: url("../img/hero.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.hero-container
+{
+    height: 854px;
+    padding-top: 300px;
+    padding-left: 150px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.hero h1
+{
+    margin-top: 0;
+    margin-bottom: 0.2em;
+    font-size: 4em;
+}
+
+.hero p
+{
+    margin: 0.2em 0;
+    font-size: 1.4em;
+}
+
+.hero-start
+{
+    margin-top: 100px;
+    padding: 10px 100px;
+    font-size: 2em;
+    font-family: 微软雅黑 Light, 微软雅黑;
+    color: #fff;
+    background-color: #e74f4d;
+    border: none;
+}
+
+.hero-start:hover
+{
+    cursor: pointer;
+    color: #e74f4d;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-start:focus
+{
+    outline: none;
+}
