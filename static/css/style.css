@@ -66,9 +66,10 @@ nav.hor-nav
     height: 100%;
     padding: 0 20px;
     text-decoration: none;
+    color: #333;
 }
 
-.nav-current, .nav-text:hover
+#nav-current, .hor-nav ul li a:hover
 {
     color: #e74f4d;
     border-bottom: solid 3px #e74f4d;
