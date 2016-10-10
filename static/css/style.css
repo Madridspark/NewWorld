@@ -2,9 +2,13 @@ html, body, ul
 {
     margin: 0;
     padding: 0;
-    font-family: 微软雅黑 Light, 微软雅黑;
+    font-family: Microsoft YaHei;
 }
 
+html, body
+{
+    min-width: 1024px;  
+}
 /*******************************************************/
 
 header.header
@@ -86,8 +90,8 @@ nav.hor-nav
 .hero-container
 {
     height: 854px;
-    padding-top: 300px;
-    padding-left: 150px;
+    padding-top: 20%;
+    padding-left: 10%;
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
 }
@@ -97,6 +101,7 @@ nav.hor-nav
     margin-top: 0;
     margin-bottom: 0.2em;
     font-size: 4em;
+    font-weight: normal;
 }
 
 .hero p
@@ -110,7 +115,7 @@ nav.hor-nav
     margin-top: 100px;
     padding: 10px 100px;
     font-size: 2em;
-    font-family: 微软雅黑 Light, 微软雅黑;
+    font-family: Microsoft YaHei;
     color: #fff;
     background-color: #e74f4d;
     border: none;
