@@ -3,13 +3,20 @@ html, body, ul
     margin: 0;
     padding: 0;
     font-family: Microsoft YaHei;
+<<<<<<< HEAD
+}
+
+html, body
+{
+    min-width: 1024px;  
+=======
+>>>>>>> origin/master
 }
 
 html, body
 {
     min-width: 1024px;  
 }
-
 /*******************************************************/
 
 header.header
@@ -156,8 +163,8 @@ nav.hor-nav
 .hero-container
 {
     height: 854px;
-    padding-top: 300px;
-    padding-left: 150px;
+    padding-top: 20%;
+    padding-left: 10%;
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
 }
