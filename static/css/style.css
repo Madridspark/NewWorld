@@ -5,13 +5,13 @@ html, body, ul
     font-family: Microsoft YaHei;
 }
 
-input, button
+input, button, select
 {
     border: none;
     font-family: Microsoft YaHei;
 }
 
-input:focus, button:focus
+input:focus, button:focus, select:focus
 {
     outline: none;
 }
@@ -74,7 +74,7 @@ header.header
     text-decoration: none;
     color: #e74f4d;
     border: solid 1px #fff;
-    border-radius: 10%;
+    border-radius: 10px;
     transition: border-color 0.5s;
 }
 
@@ -246,7 +246,7 @@ nav.hor-nav
     transition: color 0.5s;
 }
 
-.intro ul li p:hover
+.intro ul li:hover p
 {
     color: #e74f4d;
 }
@@ -312,7 +312,7 @@ nav.hor-nav
     margin: 0;
 }
 
-.cities h1:after
+.cities h1::after
 {
     content: " ";
     display: block;
@@ -330,17 +330,38 @@ nav.hor-nav
 .cities select, #city-submit
 {
     width: 250px;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    font-size: 16px;
+    color: #aaa;
     margin: 0 30px;
+}
+
+select::-ms-expand { display: none; }
+
+.cities select
+{
+    position: relative;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    padding: 0 20px;
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center #fff;
+    transition: color 0.3s, background-color 0.3s;
+
+}
+
+.cities select:hover
+{
+    color: #fff;
+    background-color: rgba(231, 79, 77, 0.3);
 }
 
 #city-submit
 {
     color: #fff;
-    background-color: rgba(231, 79, 77, 0.8);
-    font-size: 20px;
+    background-color: rgba(231, 79, 77, 0.7);
     letter-spacing: 30px;
+    text-indent: 30px;
     text-align: center;
     transition: background-color 0.5s;
 }
