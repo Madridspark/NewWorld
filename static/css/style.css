@@ -5,6 +5,17 @@ html, body, ul
     font-family: Microsoft YaHei;
 }
 
+input, button
+{
+    border: none;
+    font-family: Microsoft YaHei;
+}
+
+input:focus, button:focus
+{
+    outline: none;
+}
+
 html, body
 {
     min-width: 1024px;
@@ -14,7 +25,13 @@ html, body
 {
     min-width: 1024px;  
 }
-/*******************************************************/
+
+li
+{
+    list-style: none;
+}
+
+/*顶部导航*/
 
 header.header
 {
@@ -81,7 +98,6 @@ nav.hor-nav
 {
     position: relative;
     float: left;
-    list-style: none;
     width: 20%;    
 }
 
@@ -149,9 +165,12 @@ nav.hor-nav
     color: #e74f4d;
 }
 
+/*大图概览*/
+
 .hero
 {
-    height: 854px;
+    height: 65vw;
+    min-height: 680px;
     background-image: url("../img/hero.png");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -159,11 +178,12 @@ nav.hor-nav
 
 .hero-container
 {
-    height: 854px;
+    height: 100%;
     padding-top: 20%;
     padding-left: 10%;
     background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
+    box-sizing: border-box;
 }
 
 .hero h1
@@ -185,10 +205,8 @@ nav.hor-nav
     margin-top: 100px;
     padding: 10px 100px;
     font-size: 2em;
-    font-family: Microsoft YaHei;
     color: #fff;
     background-color: #e74f4d;
-    border: none;
     transition: background-color 0.5s, color 0.5s;
     -webkit-transition: background-color 0.5s, color 0.5s;
 }
@@ -200,7 +218,134 @@ nav.hor-nav
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.hero-start:focus
+/*特色介绍*/
+
+.intro
 {
-    outline: none;
+    height: 650px;
+}
+
+.intro ul li
+{
+    float: left;
+    width: 25%;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 70px;
+}
+
+.intro ul li p
+{
+    padding: 5px 0;
+    line-height: 30px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    color: #555;
+    border-right: solid 2px #333;
+    transition: color 0.5s;
+}
+
+.intro ul li p:hover
+{
+    color: #e74f4d;
+}
+
+.intro ul li:last-child p
+{
+    border: none;
+}
+
+.intro ul li:nth-child(1)
+{
+    background-image: url(../img/intro_1.jpg);
+}
+
+.intro ul li:nth-child(2)
+{
+    background-image: url(../img/intro_2.jpg);
+}
+
+.intro ul li:nth-child(3)
+{
+    background-image: url(../img/intro_3.jpg);
+}
+
+.intro ul li:nth-child(4)
+{
+    background-image: url(../img/intro_4.jpg);
+}
+
+.intro-more
+{
+    clear: both;
+    margin: 0;
+    padding-top: 230px;
+    padding-bottom: 100px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 50px;
+    color: #aaa;
+    background-color: #eee;
+    background-image: url("../img/logo_big.png");
+    background-position-x: center;
+    background-position-y: 100px;
+    background-repeat: no-repeat;
+}
+
+.cities
+{
+    margin: 0;
+    padding-top: 100px;
+    height: 350px;
+    background-image: url(../img/map.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+}
+
+.cities p, .cities h1
+{
+    font-weight: normal;
+    margin: 0;
+}
+
+.cities h1:after
+{
+    content: " ";
+    display: block;
+    margin: 15px auto;
+    height: 3px;
+    width: 50px;
+    background-color: #fff;
+}
+
+.cities p
+{
+    margin-bottom: 70px;
+}
+
+.cities select, #city-submit
+{
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 30px;
+}
+
+#city-submit
+{
+    color: #fff;
+    background-color: rgba(231, 79, 77, 0.8);
+    font-size: 20px;
+    letter-spacing: 30px;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+
+#city-submit:hover
+{
+    background-color: #e74f4d;
 }
