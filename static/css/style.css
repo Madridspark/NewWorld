@@ -18,12 +18,8 @@ input:focus, button:focus, select:focus
 
 html, body
 {
-    min-width: 1024px;
-}
-
-html, body
-{
-    min-width: 1024px;  
+    min-width: 1290px;
+    background-color: #eee;
 }
 
 li
@@ -230,6 +226,7 @@ nav.hor-nav
     float: left;
     width: 25%;
     text-align: center;
+    background-color: #fff;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 70px;
@@ -286,12 +283,13 @@ nav.hor-nav
     font-size: 50px;
     line-height: 50px;
     color: #aaa;
-    background-color: #eee;
     background-image: url("../img/logo_big.png");
     background-position-x: center;
     background-position-y: 100px;
     background-repeat: no-repeat;
 }
+
+/*活动查询*/
 
 .cities
 {
@@ -369,4 +367,117 @@ select::-ms-expand { display: none; }
 #city-submit:hover
 {
     background-color: #e74f4d;
+}
+
+/*活动展示*/
+
+.disp
+{
+    padding: 0 10%;
+}
+
+.disp ul
+{
+    height: 548px;
+    background-color: #eee;
+}
+
+.disp ul li
+{
+    float: left;
+    position: relative;
+    width: 25%;
+    height: 408px;
+    margin: 70px 0;
+    cursor: pointer;
+}
+
+.disp h1, .disp p, .disp img
+{
+    position: absolute;
+    left: 50%;
+    width: 216px;
+    margin-left: -109px;
+    text-align: center;
+    letter-spacing: 5px;
+    transition: font-size 0.5s, letter-spacing 0.5s;
+}
+
+.disp img
+{
+    border: solid .5px #ccc;
+}
+
+.disp h1, .disp p
+{
+    line-height: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 1px;
+    font-size: 16px;
+    font-weight: normal;
+    bottom: 28px;
+}
+
+.disp p
+{
+    font-size: 12px;
+    color: #aaa;
+    bottom: 0;
+}
+
+.disp ul li:hover h1
+{
+    top: 0;
+    bottom: auto;
+    font-size: 22px;
+    letter-spacing: 20px;
+    text-indent: 20px;
+}
+
+.disp ul li:hover p
+{
+    top: 28px;
+    bottom: auto;
+}
+
+.disp ul li:hover img
+{
+    bottom: 0;
+}
+
+.act-detail .time
+{
+    float: left;
+    width: 66.66666%;
+    height: 560px;
+    padding-top: 130px;
+    box-sizing: border-box;
+    background-image: url(../img/time.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.act-detail .time h1
+{
+    margin: 0;
+    font-size: 10em;
+    font-weight: normal;
+}
+
+.act-detail .time h2
+{
+    margin: 0;
+    font-size: 3em;
+    font-weight: normal;
+    line-height: 0.8em;
+}
+
+.act-detail .time p, .act-detail .time time
+{
+    margin: 0;
+    font-size: 2em;
+    font-weight: normal;
 }
