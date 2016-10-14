@@ -548,7 +548,7 @@ select::-ms-expand { display: none; }
     width: 50%;
     height: 100%;
     box-sizing: border-box;
-    padding: 200px 0;
+    padding: 180px 0;
     font-size: 24px;
     color: #000;
     background-color: #fff;
@@ -600,4 +600,131 @@ select::-ms-expand { display: none; }
 {
     color: #e74f4d;
     background-color: #fff;
+}
+
+#join
+{
+    padding: 70px 300px;
+    text-align: center;
+    color: #aaa;
+    background-color: #fff;
+}
+
+#join h1
+{
+    font-weight: normal;
+    color: #000;
+}
+
+#join > h1::after
+{
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 45px;
+    margin: 20px auto;
+    background-color: #e74f4d;
+}
+
+#join .apply
+{
+    margin-top: 100px;
+    height: 360px;
+    font-size: 0.7em;
+    text-align: left;
+}
+
+#join .apply .left
+{
+    float: left;
+    width: 288px;
+    line-height: 2em;
+}
+
+#join .apply .right
+{
+    height: 360px;
+    padding-left: 388px;
+}
+
+#join .apply .left .more
+{
+    text-align: right;
+}
+
+#join .apply .right input, #join .apply .right textarea
+{
+    display: block;
+    padding: 10px;
+    color: #000;
+    background-color: #eee;
+    border: solid 1px #eee;
+    box-sizing: border-box;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#join .apply .right input[type="text"]
+{
+    width: 48%;
+    margin: 10px 1%;
+}
+
+#join .apply .right input:nth-child(1), #join .apply .right input:nth-child(3)
+{
+    float: left;
+}
+
+#join .apply .right input:nth-child(2), #join .apply .right input:nth-child(4)
+{
+    float: right;
+}
+
+#join .apply .right textarea, #join .apply .right input[type="submit"]
+{
+    margin: 10px 1%;
+    width: 98%;
+}
+
+#join .apply .right textarea
+{
+    resize: none;
+    font-size: 18px;
+}
+
+#join .apply .right input[type="text"]:hover, #join .apply .right textarea:hover
+{
+    color: #fff;
+    background: #ccc;
+}
+
+#join .apply .right input[type="text"]:focus, #join .apply .right textarea:focus
+{
+    background-color: #fff;
+    outline: none;
+}
+
+#join .apply .right input[type="submit"]:hover
+{
+    color: #fff;
+    background-color: #e74f4d;
+}
+
+#join .apply .right input::-webkit-input-placeholder
+{
+    color: #555;    
+}
+
+#join .apply .right input:-moz-placeholder       /*Firefox 18-*/
+{
+    color: #555;    
+}
+
+#join .apply .right input::-moz-placeholder       /*Firefox 19+*/
+{
+    color: #555;    
+}
+
+#join .apply .right input:-ms-input-placeholder
+{
+    color: #555;    
 }
