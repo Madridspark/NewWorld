@@ -19,6 +19,7 @@ input:focus, button:focus, select:focus
 html, body
 {
     min-width: 1290px;
+    overflow-x: hidden;
     background-color: #eee;
 }
 
@@ -45,7 +46,7 @@ header.header
     background-color: #fff;
 }
 
-.logo-area
+header .logo-area
 {
     display: block;
     float: left;
@@ -59,7 +60,7 @@ header.header
     font-size: 20px;
 }
 
-.login-area
+header .login-area
 {
     float: right;
     display: block;
@@ -79,30 +80,30 @@ header.header
     transition: border-color 0.5s;
 }
 
-.login-area:hover
+header .login-area:hover
 {
     border-color: #e74f4d;
 }
 
-nav.hor-nav
+header nav
 {
     float: right;
 }
 
-.hor-nav ul
+header nav ul
 {
     float: right;
     width: 600px;
 }
 
-.hor-nav ul li
+header nav ul li
 {
     position: relative;
     float: left;
     width: 20%;    
 }
 
-.hor-nav ul li a
+header nav ul li a
 {
     display: block;
     height: 100%;
@@ -112,7 +113,7 @@ nav.hor-nav
     transition: color 1s;
 }
 
-.hor-nav ul li:last-child::after
+header nav ul li:last-child::after
 {
     content: " ";
     position: absolute;
@@ -124,84 +125,97 @@ nav.hor-nav
     transition: left 0.5s ease-in-out;
 }
 
-.hor-nav ul li:nth-child(1)[id*="nav-current"]~li:last-child::after
+header nav ul li:nth-child(1)[id*="nav-current"]~li:last-child::after
 {
     left: -400%;
 }
-.hor-nav ul li:nth-child(2)[id*="nav-current"]~li:last-child::after
+header nav ul li:nth-child(2)[id*="nav-current"]~li:last-child::after
 {
     left: -300%;
 }
-.hor-nav ul li:nth-child(3)[id*="nav-current"]~li:last-child::after
+header nav ul li:nth-child(3)[id*="nav-current"]~li:last-child::after
 {
     left: -200%;
 }
-.hor-nav ul li:nth-child(4)[id*="nav-current"]~li:last-child::after
+header nav ul li:nth-child(4)[id*="nav-current"]~li:last-child::after
 {
     left: -100%;
 }
-.hor-nav ul li:nth-child(1):hover~li:last-child::after
+header nav ul li:nth-child(1):hover~li:last-child::after
 {
     left: -400%;
 }
-.hor-nav ul li:nth-child(2):hover~li:last-child::after
+header nav ul li:nth-child(2):hover~li:last-child::after
 {
     left: -300%;
 }
-.hor-nav ul li:nth-child(3):hover~li:last-child::after
+header nav ul li:nth-child(3):hover~li:last-child::after
 {
     left: -200%;
 }
-.hor-nav ul li:nth-child(4):hover~li:last-child::after
+header nav ul li:nth-child(4):hover~li:last-child::after
 {
     left: -100%;
 }
-.hor-nav ul li:last-child:hover::after
+header nav ul li:last-child:hover::after
 {
     left: 0 !important;
 }
 
-#nav-current a, .hor-nav ul li:hover>a
+header nav il #nav-current a, header nav ul li:hover>a
 {
     color: #e74f4d;
 }
 
 /*大图概览*/
 
-.hero
+#hero
 {
+    position: relative;
     height: 65vw;
     min-height: 680px;
+    padding-top: 20%;
+    padding-left: 10%;
+    box-sizing: border-box;
+    color: #fff;    
     background-image: url("../img/hero.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-.hero-container
+#hero::before
 {
+    content: " ";
+    position: absolute;
+    width: 100%;
     height: 100%;
-    padding-top: 20%;
-    padding-left: 10%;
+    top: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    box-sizing: border-box;
+    visibility: visible;
+    transition: background-color 0.5s, visibility 0.5s;
 }
 
-.hero h1
+#hero:hover::before
+{
+    background-color: transparent;
+    visibility: hidden;
+}
+
+#hero h1
 {
     margin-top: 0;
     margin-bottom: 0.2em;
     font-size: 4em;
-    
 }
 
-.hero p
+#hero p
 {
     margin: 0.2em 0;
     font-size: 1.4em;
 }
 
-.hero-start
+#hero button
 {
     margin-top: 100px;
     padding: 10px 100px;
@@ -212,7 +226,7 @@ nav.hor-nav
     -webkit-transition: background-color 0.5s, color 0.5s;
 }
 
-.hero-start:hover
+#hero button:hover
 {
     cursor: pointer;
     color: #e74f4d;
@@ -221,12 +235,12 @@ nav.hor-nav
 
 /*特色介绍*/
 
-.intro
+#intro
 {
     height: 650px;
 }
 
-.intro ul li
+#intro ul li
 {
     float: left;
     width: 25%;
@@ -237,7 +251,7 @@ nav.hor-nav
     background-position-y: 70px;
 }
 
-.intro ul li p
+#intro ul li p
 {
     padding: 5px 0;
     line-height: 30px;
@@ -248,37 +262,37 @@ nav.hor-nav
     transition: color 0.5s;
 }
 
-.intro ul li:hover p
+#intro ul li:hover p
 {
     color: #e74f4d;
 }
 
-.intro ul li:last-child p
+#intro ul li:last-child p
 {
     border: none;
 }
 
-.intro ul li:nth-child(1)
+#intro ul li:nth-child(1)
 {
     background-image: url(../img/intro_1.jpg);
 }
 
-.intro ul li:nth-child(2)
+#intro ul li:nth-child(2)
 {
     background-image: url(../img/intro_2.jpg);
 }
 
-.intro ul li:nth-child(3)
+#intro ul li:nth-child(3)
 {
     background-image: url(../img/intro_3.jpg);
 }
 
-.intro ul li:nth-child(4)
+#intro ul li:nth-child(4)
 {
     background-image: url(../img/intro_4.jpg);
 }
 
-.intro-more
+#intro > p
 {
     clear: both;
     margin: 0;
@@ -296,7 +310,7 @@ nav.hor-nav
 
 /*活动查询*/
 
-.cities
+#actives .cities
 {
     margin: 0;
     padding-top: 100px;
@@ -309,13 +323,13 @@ nav.hor-nav
     text-align: center;
 }
 
-.cities p, .cities h1
+#actives .cities p, #actives .cities h1
 {
     
     margin: 0;
 }
 
-.cities h1::after
+#actives .cities h1::after
 {
     content: " ";
     display: block;
@@ -325,12 +339,12 @@ nav.hor-nav
     background-color: #fff;
 }
 
-.cities p
+#actives .cities p
 {
     margin-bottom: 70px;
 }
 
-.cities select, #actives .cities form input[type="submit"]
+#actives .cities select, #actives .cities form input[type="submit"]
 {
     width: 250px;
     height: 40px;
@@ -339,9 +353,9 @@ nav.hor-nav
     margin: 0 30px;
 }
 
-.cities select::-ms-expand { display: none; }
+#actives .cities select::-ms-expand { display: none; }
 
-.cities select
+#actives .cities select
 {
     position: relative;
     -moz-appearance: none;
@@ -355,7 +369,7 @@ nav.hor-nav
     transition: color 0.3s, background-color 0.3s;
 }
 
-.cities select:hover
+#actives .cities select:hover
 {
     color: #fff;
     background-color: rgba(231, 79, 77, 0.3);
@@ -378,18 +392,18 @@ nav.hor-nav
 
 /*活动展示*/
 
-.disp
+#actives .disp
 {
     padding: 0 10%;
 }
 
-.disp ul
+#actives .disp ul
 {
     height: 548px;
     background-color: #eee;
 }
 
-.disp ul li
+#actives .disp ul li
 {
     float: left;
     position: relative;
@@ -399,7 +413,7 @@ nav.hor-nav
     cursor: pointer;
 }
 
-.disp h1, .disp p, .disp img
+#actives .disp h1, #actives .disp p, #actives .disp img
 {
     position: absolute;
     left: 50%;
@@ -407,48 +421,46 @@ nav.hor-nav
     margin-left: -109px;
     text-align: center;
     letter-spacing: 5px;
-    transition: font-size 0.5s, letter-spacing 0.5s;
+    transition: font-size 0.5s, letter-spacing 0.5s, bottom 0.5s;
 }
 
-.disp img
+#actives .disp img
 {
+    bottom: 70px;
     border: solid .5px #ccc;
 }
 
-.disp h1, .disp p
+#actives .disp h1, .disp p
 {
     line-height: 18px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0 1px;
     font-size: 16px;
-    
     bottom: 28px;
 }
 
-.disp p
+#actives .disp p
 {
     font-size: 12px;
     color: #aaa;
     bottom: 0;
 }
 
-.disp ul li:hover h1
+#actives .disp ul li:hover h1
 {
-    top: 0;
-    bottom: auto;
+    bottom: 378px;
     font-size: 22px;
     letter-spacing: 20px;
     text-indent: 20px;
 }
 
-.disp ul li:hover p
+#actives .disp ul li:hover p
 {
-    top: 28px;
-    bottom: auto;
+    bottom: 350px;    
 }
 
-.disp ul li:hover img
+#actives .disp ul li:hover img
 {
     bottom: 0;
 }
@@ -486,70 +498,71 @@ nav.hor-nav
 #details .active ul li
 {
     display: inline;
-    padding: 0 15px;
+    padding: 0 5px;
 }
 
 #details .active ul li input[type="radio"]
 {
-    opacity: 0;
     cursor: pointer;
     position: absolute;
-    z-index: 2;
-    width: 15px;
-    height: 15px;
+    z-index: 3;
+    opacity: 0;
+    width: 17px;
+    height: 17px;
     margin: 0;
     padding: 0;
     border: solid 1px #aaa;
     border-radius: 50%;
 }
 
-#details .active ul li input[type="radio"]
+#details .active ul li > span
 {
-    background-color: #fff;    
-}
-
-#details .active ul li input[type="radio"]:checked~div
-{
-    display: block;
-}
-
-/*#details .active ul li::before
-{
-    content: " ";
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #000;
+    display: inline-block;
+    z-index: 3;
+    width: 12px;
+    height: 12px;
+    border: solid 2px #aaa;
     border-radius: 50%;
+    background-color: #fff;
+    transition: background-color 0.5s;
 }
 
-#details .active ul li::before:hover
+#details .active ul li input[type="radio"]:checked~span
 {
     background-color: #aaa;
-}*/
+}
 
 #details .active ul li div
 {
     float: left;
-    display: none;
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 0;
     height: 760px;
+    transition: background-size 0.5s, right 0.5s, opacity 1s;
+}
+
+#details .active ul li input[type="radio"]:checked~.left
+{
+    opacity: 1;
+}
+
+#details .active ul li input[type="radio"]:checked~.right
+{
+    right: 0;
 }
 
 #details .active ul li .left
 {
     width: 75%;
     height: 100%;
+    left: 0;
     padding-top: 230px;
     box-sizing: border-box;
-    background-image: url(../img/time.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    transition: background-size 0.5s;
+    opacity: 0;
     text-align: center;
     color: #fff;
 }
@@ -594,7 +607,7 @@ nav.hor-nav
 #details .active ul li .right
 {
     width: 25%;
-    left: 75%;
+    right: -10000px;
     box-sizing: border-box;
     padding: 80px;
 }
