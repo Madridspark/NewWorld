@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <link href="static/css/style.css" rel="stylesheet" />
+        <link href="static/font/iconfont.css" rel="stylesheet" />
     </head>
     <body>
         <!--顶部导航-->
@@ -60,7 +61,7 @@
                         <option>日照</option>
                         <option>烟台</option>                        
                     </select>
-                    <input id="city-submit" type="submit" value="搜索" />
+                    <input type="submit" value="搜索" />
                 </form>
             </div>
             <!--活动展示-->
@@ -90,32 +91,52 @@
             </div>
         </section>
         <section id="details">
-            <div class="detail active">
+            <div class="active">
+                <ul>
+                    <li>
+                        <!--&nbsp;-->
+                        <input type="radio" name="active_current" checked="checked"/>
+                        <div class="left">
+                            <h2>新世界</h2>
+                            <h1>TIME</h1>
+                            <p>@新世界-北京</p>
+                            <time>2016.04.01</time>
+                        </div>
+                        <div class="right">
+                            <h1>新世界<i>/</i><span>01</span></h1>
+                            <p>新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？新世界？</p>
+                            <a href="#">更多详情</a>
+                        </div>
+                    </li>
+                    <li>
+                        <!--&nbsp;-->
+                        <input type="radio" name="active_current" />
+                        <div class="left">
+                            <h2>新世界</h2>
+                            <h1>CODE</h1>
+                            <p>@新世界-西安</p>
+                            <time>2016.10.01</time>
+                        </div>
+                        <div class="right">
+                            <h1>新世界<i>/</i><span>02</span></h1>
+                            <p>新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2新世界2</p>
+                            <a href="#">更多详情</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="about">
                 <div class="left">
-                    <div class="slide">
-                        <h2>新世界</h2>
-                        <h1>TIME</h1>
-                        <p>@新世界-北京</p>
-                        <time>2016.04.01</time>
-                    </div>
+                    <p>新时代</p>
+                    <p>关于爱生活的我们</p>
+                    <a href="#">查看更多</a>
+                </div>
+                <div class="left">
+                    <p>新时代</p>
+                    <p>关于爱生活的我们</p>
+                    <a href="#">查看更多</a>
                 </div>
                 <div class="right">
-                </div>
-            </div>
-            <div class="detail about">
-                <div class="left">
-                    <div class="about-1">
-                        <p>新时代</p>
-                        <p>关于爱生活的我们</p>
-                        <a href="#">查看更多</a>
-                    </div>
-                    <div class="about-2">
-                        <p>新时代</p>
-                        <p>关于爱生活的我们</p>
-                        <a href="#">查看更多</a>
-                    </div>
-                </div>
-                <div class="right a_pic">
                 </div>
             </div>
         </section>
@@ -149,5 +170,23 @@
                 </form>
             </div>
         </section>
+        <section id="com">
+            <h1>联系我们</h1>
+            <p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯<br/>也可以通过以下任何方式关注我们的动态</p>
+            <form>
+                <input type="email" placeholder="someone@email.com" />
+                <input type="submit" value="提交" />
+            </form>
+            <div>
+                <a href="#" class="iconfont icon-qq"></a>
+                <a href="#" class="iconfont icon-weibo"></a>
+                <a href="#" class="iconfont icon-twitter"></a>
+                <a href="#" class="iconfont icon-global"></a>
+            </div>
+        </section>
+        <footer>
+            <a href="http:madridspark.cn/">新世界 2016 &copy; madridspark.cn</a>
+            <a href="#">Back to top</a>
+        </footer>
     </body>
 </html>
